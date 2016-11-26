@@ -2,6 +2,7 @@
 Tested procedure for recovery of GPG keys.
 # Procedure
 1. Remove all existing keyrings
+
     ```
     rm -rf ~/.gnupg
     ```
@@ -9,11 +10,13 @@ Tested procedure for recovery of GPG keys.
     1. ~/gnupg-dansullivan-public.txt
     2. ~/gnupg-dansullivan-private.txt
 3. Import the keys
+
     ```
      gpg --import ~/gnupg-dansullivan-public.txt
      gpg --import ~/gnupg-dansullivan-private.txt
      ```
 4. Delete the exports
+
     ```
      rm -rf ~/gnupg-dansullivan-public.txt
      rm -rf ~/gnupg-dansullivan-private.txt

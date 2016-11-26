@@ -20,11 +20,13 @@ Tested procedure for recovery of GPG keys.
      ```
 5.  Test the recovery
     1.  Clone the blackbox demo
+        
         ```
         cd /tmp && rm -rf blackbox-demo \
         && git clone git@github.com:dsulli99/blackbox-demo.git && cd blackbox-demo
         ```
     2. Test the ability to decrypt the file
+        
         ```
         blackbox_edit secret_data.txt.gpg
         ```

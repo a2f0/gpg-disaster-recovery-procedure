@@ -14,7 +14,7 @@ Tested procedure for recovery of GPG keys.  This is for GnuPG version 2.
     2. ~/gnupg-dansullivan-private.txt
 3. Import the keys
 
-    Use gpg
+    Use GnuPG version 2
     
     ```
     gpg --import ~/gnupg-dansullivan-public.txt

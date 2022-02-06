@@ -9,16 +9,14 @@ Tested procedure for recovery of GPG keys.  This is for GnuPG version 2.
     rm -rf ~/.gnupg
     ```
     
-2. Retrieve keys from secret place, create two files
-    1. ~/gnupg-dansullivan-public.txt
-    2. ~/gnupg-dansullivan-private.txt
+2. Retrieve private key from secret place, copy contents into a new file `~/restore-key.asc`
+   
 3. Import the keys
 
     Use GnuPG version 2
     
     ```
-    gpg --import ~/gnupg-dansullivan-public.txt
-    gpg --import ~/gnupg-dansullivan-private.txt
+    gpg --import ~/restore-key.asc
     ```
     
     Make sure the keys are installed
@@ -28,11 +26,10 @@ Tested procedure for recovery of GPG keys.  This is for GnuPG version 2.
     gpg --list-secret-keys
     ```
      
-4. Delete the exports
+4. Delete the key that was imported
 
     ```
-     rm -rf ~/gnupg-dansullivan-public.txt
-     rm -rf ~/gnupg-dansullivan-private.txt
+     rm -rf ~/restore-key.asc
      ```
 5.  Test the recovery
     1.  Clone the blackbox demo
@@ -44,7 +41,8 @@ Tested procedure for recovery of GPG keys.  This is for GnuPG version 2.
     2. Test the ability to decrypt the file
         
         ```
-        blackbox_edit secret_data.txt.gpg
+        blackbox_decrypt_all_files
+        blackbox_shred_all_files
         ```
     
 # Reference
